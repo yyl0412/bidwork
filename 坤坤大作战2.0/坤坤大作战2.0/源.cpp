@@ -526,9 +526,6 @@ int main() {
 			//检测敌人和玩家的碰撞
 			for (Enemy* enemy : enemy_list) {
 				if (enemy->CheckPlayerCollision(player)) {
-					/*	MessageBox(GetHWnd(), _T("扣“1”观看战败CG"), _T("游戏结束"), MB_OK);
-						running = false;
-						break;*/
 					static TCHAR text[128];
 					_stprintf_s(text, _T("最终得分：%d !"), score);
 					MessageBox(GetHWnd(), text, _T("游戏结束"), MB_OK);
